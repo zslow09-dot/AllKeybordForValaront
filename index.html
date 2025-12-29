@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT 马来西亚键盘指南 (MYR)</title>
+    <style>
+        /* --- 基础设置 --- */
+        :root {
+            --valo-red: #ff4655;
+            --valo-white: #ece8e1;
+            --bg-dark: #0f1923;
+            --bg-card: #1f2731;
+            --text-main: #ffffff;
+            --text-muted: #768079;
+            --price-gold: #ffca28;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-image: radial-gradient(circle at top right, #2a2a2a 0%, var(--bg-dark) 60%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: var(--valo-white);
+        }
+        
+        .section-header h2 span { color: var(--valo-red); }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* --- 分组标题 --- */
+        .group-title {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: var(--valo-white);
+            margin: 50px 0 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .group-title span {
+            background: var(--valo-red);
+            color: #fff;
+            padding: 2px 10px;
+            font-size: 0.9rem;
+            margin-right: 15px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        /* --- 指南卡片网格 (核心修复区域) --- */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 25px;
+            /* 关键修复：强制同一行的卡片高度一致 */
+            align-items: stretch; 
+        }
+
+        /* --- 单个键盘卡片 --- */
+        .keyboard-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            /* 关键修复：使用 Flexbox 让卡片内部撑满高度 */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* 内容从上到下排列 */
+            height: 100%; /* 占满网格单元高度 */
+        }
+
+        .keyboard-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--valo-red);
+            box-shadow: 0 10px 30px rgba(255, 70, 85, 0.15);
+        }
+
+        /* 价格标签 */
+        .price-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--price-gold);
+        }
+
+        /* 卡片内容 */
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 5px;
+            padding-right: 60px; /* 给价格留位置 */
+        }
+
+        .brand {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .features {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .feature-pill {
+            font-size: 0.75rem;
+            background: rgba(255,255,255,0.08);
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #ccc;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 20px;
+            /* 关键修复：让描述区域自动填充剩余空间，把底部渠道框推到底部 */
+            flex-grow: 1; 
+        }
+
+        .channel-box {
+            background: rgba(0,0,0,0.3);
+            border-left: 2px solid var(--valo-red);
+            padding: 8px 12px;
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-top: auto; /* 确保始终在底部 */
+        }
+
+        .channel-box strong { color: #fff; }
+
+        /* 移动端适配 */
+        @media (max-width: 600px) {
+            .section-header h2 { font-size: 2rem; }
+            .guide-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="section-header">
+            <h2>Malaysia <span>Valorant</span> Guide</h2>
+            <p>基于马来西亚市场 (Shopee / Lazada / Rextech) 的真实价格与渠道推荐</p>
+        </div>
+
+        <!-- 旗舰组 -->
+        <div class="group-title"><span>RM 800 - 1,100+</span> 顶级旗舰组</div>
+        <div class="guide-grid">
+            <!-- Wooting -->
+            <div class="keyboard-card">
+                <div class="price-tag">RM 1,000+</div>
+                <div class="card-title">Wooting 60HE+</div>
+                <div class="brand">Wooting</div>
+                <div class="features">
+                    <span class="feature-pill">Rapid Trigger</span>
+                    <span class="feature-pill">Hall Effect</span>
+                </div>
+                <p class="description">
+                    <strong>瓦罗兰特的“神”。</strong> 除了贵和本地保修困难（通常靠代购），在 RT 性能和急停体验上没有任何缺点。
+                </p>
+                <div class="channel-box"><strong>渠道：</strong> 官网直邮 / Shopee 代购</div>
+            </div>
+
+            <!-- Razer -->
+            <div class="keyboard-card">
+                <div class="price-tag">~RM 1,000</div>
+                <div class="card-title">Huntsman V3 Pro TKL</div>
+                <div class="brand">Razer</div>
+                <div class="features">
+                    <span class="feature-pill">Snap Tap</span>
+                    <span class="feature-pill">Analog Optical</span>
+                </div>
+                <p class="description">
+                    <strong>马来西亚最容易买到的顶级磁轴。</strong> 官方旗舰店购买方便，售后无忧。Snap Tap 功能对急停有巨大加成。
+                </p>
+                <div class="channel-box"><strong>渠道：</strong> Shopee/Lazada 官方旗舰店</div>
+            </div>
+
+            <!-- SteelSeries -->
+            <div class="keyboard-card">
+                <div class="price-tag">~RM 900</div>
+                <div class="card-title">Apex Pro TKL (2023)</div>
+                <div class="brand">SteelSeries</div>
+                <div class="features">
+                    <span class="feature-pill">OmniPoint</span>
+                    <span class="feature-pill">OLED Screen</span>
+                </div>
+                <p class="description">
+                    <strong>屏幕很炫酷，磁轴调节成熟。</strong> 各大商场实体店常有折扣，适合喜欢在店内试手的玩家。
+                </p>
+                <div class="channel-box"><strong>渠道：</strong> Courts / Harvey Norman / Shopee</div>
+            </div>
+        </div>
+
+        <!-- 中端组 -->
+        <div class="group-title"><span>RM 400 - 700</span> 中端性能组</div>
+        <div class="guide-grid">
+            <!-- DrunkDeer -->
+            <div class="keyboard-card">
+                <div class="price-tag">~RM 500</div>
+                <div class="card-title">DrunkDeer A75 / G65</div>
+                <div class="brand">DrunkDeer</div>
+                <div class="features">
+                    <span class="feature-pill">Best Value</span>
+                    <span class="feature-pill">8000Hz</span>
+                </div>
+                <p class="description">
+                    <strong>马来西亚最火的磁轴之一。</strong> 价格适中，RT 性能非常稳，是很多本地学生的首选。A75 带旋钮，G65 更紧凑。
+                </p>
+                <div class="channel-box"><strong>渠道：</strong> Shopee DrunkDeer Official</div>
+            </div>
+
+            <!-- Keychron -->
+            <div class="keyboard-card">
+                <div class="price-tag">~RM 750</div>
+                <div class="card-title">Keychron Q1 HE</div>
+                <div class="brand">Keychron</div>
+                <div class="features">
+                    <span class="feature-pill">All Aluminum</span>
+                    <span class="feature-pill">Gasket</span>
+                </div>
+                <p class="description">
+                    <strong>兼顾办公和写代码。</strong> 全铝机身+旋钮设计，质感天花板。如果你既想玩游戏又需要工作，这是最佳选择。
+                </p>
+                <div class="channel-box"><strong>渠道：</strong> Shopee Keychron Official</div>
+            </div>
+
+            <!-- ROG -->
+            <div class="keyboard-card">
+                <div class="price-tag">~RM 750</div>
+                <div class="card-title">Falchion Ace HFX</div>
+                <div class="brand">ASUS ROG</div>
+                <div class="features">
+                    <span class="feature-pill">Wireless</span>
+                    <span class="feature-pill">Aura Sync</span>
+                </div>
+                <p class="description">
+                    <strong>华硕的高端磁轴。</strong> 响应极快，适合拥有 ROG 全家桶（鼠标、耳机）的玩家。
+                </p>
+                <div class="channel-box"><strong>渠道：</strong> Shopee ROG Official / ExaTech</div>
+            </div>
+        </div>
+
+        <!-- 入门组 -->
+        <div class="group-title"><span>RM 200 - 400</span> 入门/性价比组</div>
+        <div class="guide-grid">
+            
+            <!-- AULA WIN60HE -->
+            <div class="keyboard-card">
+                <div class="price-tag">~RM 350</div>
+                <div class="card-title">AULA WIN60HE</div>
+                <div class="brand">AULA</div>
+                <div class="features">
+                    <span class="feature-pill">Rapid Trigger</span>
+                    <span class="feature-pill">8000Hz</span>
+                    <span class="feature-pill">Hall Effect</span>
+                </div>
+                <p class="description">
+                    <strong>马来西亚最热门的 Wooting 平替。</strong> 带有 8000Hz 回报率和 Rapid Trigger 功能，急停体验优秀，但价格只有大牌的一半。
+                </p>
+                <div class="channel-box"><strong>渠道：</strong> Shopee AULA Official / 各大代理</div>
+            </div>
+
+            <!-- AULA MAD60HE -->
+            <div class="keyboard-card">
+                <div class="price-tag">~RM 350</div>
+                <div class="card-title">AULA MAD60HE</div>
+                <div class="brand">AULA</div>
+                <div class="features">
+                    <span class="feature-pill">Magnetic Switch</span>
+                    <span class="feature-pill">Adjustable</span>
+                </div>
+                <p class="description">
+                    <strong>WIN 系列的姊妹款。</strong> 同样搭载磁轴，支持可调节触发键程。手感扎实，外观设计简约，是极具性价比的入门磁轴选择。
+                </p>
+                <div class="channel-box"><strong>渠道：</strong> Shopee AULA Official</div>
+            </div>
+
+            <!-- MCHOSE -->
+            <div class="keyboard-card">
+                <div class="price-tag">RM 300+</div>
+                <div class="card-title">MCHOSE G75 / GX87</div>
+                <div class="brand">MCHOSE</div>
+                <div class="features">
+                    <span class="feature-pill">Aluminum</span>
+                    <span class="feature-pill">8K Rate</span>
+                </div>
+                <p class="description">
+                    <strong>最近在本地圈子很火。</strong> 铝合金质感 + 8K 回报率，性价比卷到了极致，做工对得起价格。
+                </p>
+                <div class="channel-box"><strong>渠道：</strong> Shopee MCHOSE Store</div>
+            </div>
+
+            <!-- VGN -->
+            <div class="keyboard-card">
+                <div class="price-tag">RM 350+</div>
+                <div class="card-title">VGN/VXE ATK68</div>
+                <div class="brand">VGN</div>
+                <div class="features">
+                    <span class="feature-pill">Gateron Mag</span>
+                    <span class="feature-pill">High Performance</span>
+                </div>
+                <p class="description">
+                    <strong>采用了和 Wooting 类似的 Gateron 磁轴。</strong> 性能非常顶，Shopee 销量很高，是入门首选。
+                </p>
+                <div class="channel-box"><strong>渠道：</strong> Shopee VGN Official</div>
+            </div>
+
+            <!-- Redragon -->
+            <div class="keyboard-card">
+                <div class="price-tag">RM 200+</div>
+                <div class="card-title">Redragon K617 Fizz</div>
+                <div class="brand">Redragon</div>
+                <div class="features">
+                    <span class="feature-pill">Budget King</span>
+                    <span class="feature-pill">Magnetic</span>
+                </div>
+                <p class="description">
+                    <strong>极致预算首选。</strong> 虽然驱动不如大厂精细，但拥有基础的 RT 功能。Redragon 在本地非常普及。
+                </p>
+                <div class="channel-box"><strong>渠道：</strong> Shopee Redragon Official</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
